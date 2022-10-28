@@ -1,6 +1,6 @@
 var taskInput = document.getElementById("new-task");
 var addButton = document.querySelector(".new-task__btn");
-var incompleteTaskHolder = document.querySelector(".incompleted-list"); 
+var incompleteTaskHolder = document.querySelector(".incompleted-list");
 var completedTasksHolder = document.querySelector(".completed-list");
 
 var createNewTaskElement = function (taskString) {
@@ -11,11 +11,12 @@ var createNewTaskElement = function (taskString) {
   var editButton = document.createElement("button"); //edit button
   var deleteButton = document.createElement("button"); //delete button
   var deleteButtonImg = document.createElement("img"); //delete button image
-
+  listItem.className = "list-item";
   label.innerText = taskString;
   label.className = "list-item__label";
 
   checkBox.type = "checkbox";
+  checkBox.className = "list-item__checkbox";
   editInput.type = "text";
   editInput.className = "new-task__input";
 
@@ -34,17 +35,17 @@ var createNewTaskElement = function (taskString) {
   return listItem;
 };
 
-var addTask = function() {
+var addTask = function () {
   if (!taskInput.value) return; //Create a new list item with the text from the #new-task:
   var listItem = createNewTaskElement(taskInput.value);
-  incompleteTaskHolder.appendChild(listItem);  //Append listItem to incompleteTaskHolder
+  incompleteTaskHolder.appendChild(listItem); //Append listItem to incompleteTaskHolder
   bindTaskEvents(listItem, taskCompleted);
   taskInput.value = "";
 };
 
 //Edit an existing task.
 
-var editTask = function() {
+var editTask = function () {
   var listItem = this.parentNode;
 
   var editInput = listItem.querySelector("input[type=text]");
