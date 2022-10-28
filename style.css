@@ -18,11 +18,9 @@ body {
 }
 
 @media (max-width: 768px) {
-
-  .header { 
+  .header {
     text-align: center;
   }
-
 }
 
 .app {
@@ -31,7 +29,7 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.new-task__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -45,11 +43,11 @@ body {
   padding: 0;
   list-style: none;
 }
-
+/* 
 input,
 button {
   outline: none;
-}
+} */
 button {
   background: none;
   border: 0px;
@@ -70,8 +68,9 @@ label[for="new-task"] {
   font-size: 15px;
   border-bottom: 2px solid #333;
   padding: 30px 0 10px;
-  margin: 0;
   text-transform: uppercase;
+  display: block;
+  margin: 0 0 20px;
 }
 input[type="text"] {
   margin: 0;
@@ -89,11 +88,6 @@ input[type="text"]:focus {
   color: #333;
 }
 
-/* New Task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
 input#new-task {
   width: 318px;
 }
@@ -102,26 +96,23 @@ input#new-task {
 li {
   overflow: hidden;
   padding: 20px 0;
-  border-bottom: 1px solid #eee;  
+  border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-li > * {
-  vertical-align: middle;
 }
 
 li > input[type="checkbox"] {
   margin: 0 10px;
 }
-li > label {
+li > label,
+.new-task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
 }
 li > input[type="text"] {
-  width: 226px
+  width: 226px;
 }
 button.delete img {
   height: 2em;
@@ -139,11 +130,11 @@ ul#completed-tasks label {
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul li input[type="text"] {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+ul li.editMode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
