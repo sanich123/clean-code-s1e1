@@ -4,7 +4,6 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-
 .header {
   width: 500px;
   margin: 0 auto;
@@ -26,7 +25,7 @@ body {
 
 }
 
-.centered-main-page-element {
+.app {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -37,17 +36,16 @@ body {
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.new-task-wrapper {
   display: flex;
 }
-ul {
+.incompleted-list,
+.completed-list {
   margin: 0;
-  padding: 0px;
-}
-li, 
-h3 {
+  padding: 0;
   list-style: none;
 }
+
 input,
 button {
   outline: none;
