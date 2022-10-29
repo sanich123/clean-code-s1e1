@@ -3,7 +3,6 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
-
 .header {
   width: 500px;
   margin: 0 auto;
@@ -13,11 +12,9 @@
 .header__img {
   width: 100%;
 }
-
 .header__info {
   font-family: fantasy, cursive;
 }
-
 @media (max-width: 768px) {
 
   .header {
@@ -25,31 +22,28 @@
   }
 
 }
-
 .app {
   display: block;
   width: 500px;
   margin: 0 auto;
 }
-
 .new-task-wrapper {
   display: flex;
 }
-
 .incompleted-list,
 .completed-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .new-task__input {
   width: 100%;
   display: inline-block;
   flex-grow: 1;
 }
-
-.app button {
+.list-item__delete-btn,
+.list-item__edit-btn,
+.new-task__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -58,10 +52,11 @@
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.app button:hover {
+.list-item__delete-btn:hover,
+.list-item__edit-btn:hover,
+.new-task__btn:hover {
   color: #3a3a3a;
 }
-
 .app__h3,
 .new-task .new-task__label {
   color: #333;
@@ -73,40 +68,33 @@
   display: block;
   margin: 0 0 20px;
 }
-
 .list-item__input,
 .new-task__input {
+  font: 18px/21px Lato, sans-serif;
   margin: 0;
-  font-size: 18px;
-  line-height: 18px;
   height: 21px;
   padding: 0 9px;
   border: 1px solid #ddd;
   background: #fff;
   border-radius: 6px;
-  font-family: Lato, sans-serif;
   color: #888;
 }
-
 .list-item__input {
   width: 236px;
 }
 .new-task__input {
   width: 318px;
 }
-
 .list-item__input:focus,
 .new-task__input:focus {
   color: #333;
 }
-
 .list-item .new-task__input {
   display: none;
 }
 .editing-mode .new-task__input {
   display: inline-block;
 }
-
 .list-item {
   overflow: hidden;
   padding: 20px 0;
@@ -115,11 +103,9 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .list-item__checkbox {
   margin: 0 10px;
 }
-
 .new-task__label, 
 .list-item__label {
   padding-left: 10px;
@@ -130,24 +116,21 @@
   width: 236px;
 }
 
-.list-item__delete-btn img {
+.list-item__delete-btn .delete-btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.list-item__delete-btn img:hover {
+.list-item__delete-btn .delete-btn__img:hover {
   transform: rotateZ(0);
 }
-
-.completed-list label {
+.completed-list .list-item__label {
   text-decoration: line-through;
   color: #888;
 }
-
 .list-item .list-item__input {
   display: none;
 }
-
 .editing-mode .list-item__input {
   display: inline-block;
   width: 224px;
