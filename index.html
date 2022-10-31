@@ -22,6 +22,7 @@
       </a>
     </header>
     <main class="app">
+      <h1 class="visually-hidden">Todo app</h1>
       <section class="app__new-task new-task">
         <label class="new-task__label" for="new-task">Add Item</label>
         <div class="new-task-wrapper">
@@ -29,39 +30,44 @@
           <button class="new-task__btn">Add</button>
         </div>
       </section>
-      <h3 class="app__h3">Todo</h3>
-      <ul class="incompleted-list">
-        <li class="incompleted-list__item list-item">
-          <input class="list-item__checkbox" type="checkbox" />
-          <label class="list-item__label">Pay Bills</label>
-          <input class="list-item__input" type="text" />
-          <button class="list-item__edit-btn">Edit</button>
-          <button class="list-item__delete-btn">
-            <img class="delete-btn__img" src="./remove.svg" alt=""/>
-          </button>
-        </li>
-        <li class="list-item editing-mode">
-          <input class="list-item__checkbox" type="checkbox" />
-          <label class="list-item__label">Go Shopping</label>
-          <input class="list-item__input" type="text" value="Go Shopping" />
-          <button class="list-item__edit-btn">Save</button>
-          <button class="list-item__delete-btn">
-            <img class="delete-btn__img" src="./remove.svg" alt=""/>
-          </button>
-        </li>
-      </ul>
-      <h3 class="app__h3">Completed</h3>
-      <ul class="completed-list">
-        <li class="list-item">
-          <input class="list-item__checkbox" type="checkbox" checked />
-          <label class="list-item__label">See the Doctor</label>
-          <input class="list-item__input" type="text" />
-          <button class="list-item__edit-btn">Edit</button>
-          <button class="list-item__delete-btn delete-btn">
-            <img class="delete-btn__img" src="./remove.svg" alt=""/>
-          </button>
-        </li>
-      </ul>
+
+      <section class="incompleted">
+        <h3 class="app__h3">Todo</h3>
+        <ul class="incompleted-list">
+          <li class="incompleted-list__item list-item">
+            <input class="list-item__checkbox" type="checkbox" />
+            <label class="list-item__label">Pay Bills</label>
+            <input class="list-item__input" type="text" />
+            <button class="list-item__edit-btn">Edit</button>
+            <button class="list-item__delete-btn">
+              <img class="delete-btn__img" src="./remove.svg" alt="" />
+            </button>
+          </li>
+          <li class="list-item editing-mode">
+            <input class="list-item__checkbox" type="checkbox" />
+            <label class="list-item__label">Go Shopping</label>
+            <input class="list-item__input" type="text" value="Go Shopping" />
+            <button class="list-item__edit-btn">Save</button>
+            <button class="list-item__delete-btn">
+              <img class="delete-btn__img" src="./remove.svg" alt="" />
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="completed">
+        <h3 class="app__h3">Completed</h3>
+        <ul class="completed-list">
+          <li class="list-item">
+            <input class="list-item__checkbox" type="checkbox" checked />
+            <label class="list-item__label">See the Doctor</label>
+            <input class="list-item__input" type="text" />
+            <button class="list-item__edit-btn">Edit</button>
+            <button class="list-item__delete-btn delete-btn">
+              <img class="delete-btn__img" src="./remove.svg" alt="" />
+            </button>
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
