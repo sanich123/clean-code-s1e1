@@ -19,7 +19,7 @@ const createNewTaskElement = function (taskString) {
   checkBox.type = "checkbox";
   checkBox.className = "list-item__checkbox";
   editInput.type = "text";
-  editInput.className = "new-task__input";
+  editInput.className = "list-item__input";
 
   editButton.innerText = "Edit";
   editButton.className = "list-item__edit-btn";
